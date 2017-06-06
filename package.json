@@ -1,0 +1,44 @@
+{
+  "name": "redis-wrapper",
+  "version": "1.0.0",
+  "description": "A wrapper for node 'redis' library with auto connection-closing.",
+  "main": "./dist/main.min.js",
+  "keywords": [
+    "redis",
+    "wrapper",
+    "auto close"
+  ],
+  "scripts": {
+    "test": "mocha test.js",
+    "build": "webpack",
+    "prepublish": "npm run lint & npm run build",
+    "lint": "node_modules/.bin/eslint src/**/*.js --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marsoln/redis-wrapper.git"
+  },
+  "author": "marsoln",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/marsoln/redis-wrapper/issues"
+  },
+  "homepage": "https://github.com/marsoln/redis-wrapper#readme",
+  "dependencies": {
+    "redis": "^2.7.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-eslint": "^7.2.3",
+    "babel-loader": "^7.0.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^15.0.1",
+    "eslint-plugin-import": "^2.3.0",
+    "eslint-plugin-jsx-a11y": "^5.0.3",
+    "eslint-plugin-react": "^7.0.1",
+    "mocha": "^3.4.2",
+    "webpack": "^2.6.1"
+  }
+}
