@@ -1,4 +1,4 @@
-# NODE-REDIS-WRAPPER
+# REDIS-CONN-WRAPPER
 
 > A wrapper for node ['redis'](https://github.com/NodeRedis/node_redis) with auto connection-closing.
 
