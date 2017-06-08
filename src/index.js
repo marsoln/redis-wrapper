@@ -21,11 +21,11 @@ const __wrapper = function (connection) {
   return connection
 }
 
-const init = function (redis, redisConf) {
+const init = function (redis, { port, host, ...rest }) {
 
   let connGen = (function* () {
     while (true) {
-      let connection = redis.createClient(redisConf.port, redisConf.host, {
+      let connection = redis.createClient(port, host, Object.assign({
         retry_strategy: function (options) {
           if (options.error && options.error.code === 'ECONNREFUSED') {
             console.error('Redis server refused the connection.')
@@ -36,7 +36,7 @@ const init = function (redis, redisConf) {
           }
           return 2000 // retry in 2s
         },
-      })
+      }, {...rest }))
 
       connection.on('error', (ex) => {
         console.error(ex.message)
