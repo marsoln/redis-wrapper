@@ -1,6 +1,6 @@
 {
   "name": "redis-conn-wrapper",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A wrapper for node 'redis' library with auto connection-closing.",
   "main": "./dist/main.min.js",
   "keywords": [
@@ -9,7 +9,7 @@
     "auto close"
   ],
   "scripts": {
-    "test": "mocha test.js",
+    "test": "mocha test/index.js",
     "build": "webpack",
     "prepublish": "npm run lint & npm run build",
     "lint": "node_modules/.bin/eslint src/**/*.js --fix"
