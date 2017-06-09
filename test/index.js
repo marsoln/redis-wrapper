@@ -1,5 +1,8 @@
+require('babel-register')
+require('babel-polyfill')
+
 const redis = require('redis')
-const initRedis = require('./src/index')
+const initRedis = require('../src/index')
 const assert = require('assert')
 
 const redisConfig = {
