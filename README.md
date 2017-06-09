@@ -4,6 +4,8 @@
 
 ## Usage
 
+install via yarn/npm `yarn add redis-conn-wrapper` `npm install redis-conn-wrapper`
+
 ```javascript
 
 const redis = require('redis')
