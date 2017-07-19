@@ -1,6 +1,6 @@
 {
   "name": "redis-conn-wrapper",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A wrapper for node 'redis' library with auto connection-closing.",
   "main": "./src/index.js",
   "keywords": [

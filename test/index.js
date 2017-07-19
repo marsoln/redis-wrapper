@@ -14,9 +14,9 @@ let conn = initRedis(redis, redisConfig)
 
 describe('connection', () => {
 
-  it('should set the string data correctly', async() => {
-    let input_key = 'test key'
-    let input_value = 'test value'
+  it('should set the string data correctly', async () => {
+    let input_key = 'test-key'
+    let input_value = 'test-value'
 
     conn.set(input_key, input_value)
 
@@ -25,10 +25,10 @@ describe('connection', () => {
     assert.equal(res, input_value)
   })
 
-  it('should also be able to set a hash value', async() => {
+  it('should also be able to set a hash value', async () => {
     let table = 'test-table'
-    let input_key = 'test key'
-    let input_value = 'test value'
+    let input_key = 'test-key'
+    let input_value = 'test-value'
 
     conn.hset(table, input_key, input_value)
 
