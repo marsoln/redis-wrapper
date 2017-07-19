@@ -23,3 +23,6 @@ let conn = wrapper(redis, redisConfig)
 
 ```
 
+# Updates
+
+- 1.0.4: change source to ES6 syntax
