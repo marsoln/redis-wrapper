@@ -18,9 +18,14 @@ const redisConfig = {
 
 let conn = wrapper(redis, redisConfig)
 
-// all the connection functions will auto close when they finished
-// conn.get('key').then((data)=>{ ... }).catch((err)=> { ... })
-
+// connection will auto close when it finished
+conn.get('key')
+    .then((data)=>{ 
+        //... 
+    })
+    .catch((err)=> {
+        //...
+    })
 ```
 
 # Updates
