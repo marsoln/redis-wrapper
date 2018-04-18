@@ -26,8 +26,17 @@ conn.get('key')
     .catch((err)=> {
         //...
     })
+
+// with obj
+
+conn.setObj('key1', { name : 1 })
+.then(()=>{
+    conn.getObj('key1').then(({name})=>{ console.log(`name is ${name}`)})
+})
+
 ```
 
 # Updates
 
 - 1.0.4: change source to ES6 syntax
+- 1.1.0: add setObj and getObj

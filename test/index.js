@@ -18,7 +18,7 @@ describe('connection', () => {
     let input_key = 'test-key'
     let input_value = 'test-value'
 
-    conn.set(input_key, input_value)
+    await conn.set(input_key, input_value)
 
     let res = await conn.get(input_key)
 
@@ -30,11 +30,21 @@ describe('connection', () => {
     let input_key = 'test-key'
     let input_value = 'test-value'
 
-    conn.hset(table, input_key, input_value)
+    await conn.hset(table, input_key, input_value)
 
     let res = await conn.hget(table, input_key)
 
     assert.equal(res, input_value)
   })
 
+  it('should storage an object', async () => {
+    let input_key = 'test-object-key'
+    let input_value = { name: 'haha' }
+
+    await conn.setObj(input_key, input_value)
+
+    let res = await conn.getObj(input_key)
+
+    assert.equal(res.name, 'haha')
+  })
 })
