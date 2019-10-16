@@ -1,17 +1,17 @@
 {
   "name": "redis-conn-wrapper",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A wrapper for node 'redis' library with auto connection-closing.",
-  "main": "./src/index.js",
+  "main": "./dist/index.js",
   "keywords": [
     "redis",
     "wrapper",
     "auto close"
   ],
   "scripts": {
-    "test": "mocha test/index.js",
-    "prepublish": "yarn run lint & yarn run test",
-    "lint": "node_modules/.bin/eslint src/**/*.js --fix"
+    "test": "mocha test/index.spec.js",
+    "prepublish": "yarn run lint & tsc & yarn run test",
+    "lint": "node_modules/.bin/tslint src/**/*.ts --fix"
   },
   "repository": {
     "type": "git",
@@ -24,20 +24,18 @@
   },
   "homepage": "https://github.com/marsoln/redis-wrapper#readme",
   "dependencies": {
-    "redis": "^2.7.1"
+    "@types/node": "^12.11.1",
+    "@types/redis": "^2.8.14",
+    "redis": "^2.7.1",
+    "typescript": "^3.6.4"
   },
   "devDependencies": {
     "babel-core": "^6.24.1",
-    "babel-eslint": "^7.2.3",
     "babel-polyfill": "^6.23.0",
     "babel-preset-stage-2": "^6.24.1",
     "babel-register": "^6.24.1",
-    "eslint": "^3.19.0",
-    "eslint-config-airbnb": "^15.0.1",
-    "eslint-plugin-import": "^2.3.0",
-    "eslint-plugin-jsx-a11y": "^5.0.3",
-    "eslint-plugin-react": "^7.0.1",
-    "mocha": "^3.4.2"
+    "mocha": "^3.4.2",
+    "tslint": "^5.20.0"
   },
   "babel": {
     "presets": [

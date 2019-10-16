@@ -4,8 +4,8 @@ node_modules/
 # test file
 test/
 
-# dist file
-dist/
+# src file
+src/
 
 # Mac file
 .DS_STORE

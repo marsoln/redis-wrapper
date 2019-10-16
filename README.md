@@ -8,7 +8,6 @@ install via yarn/npm `yarn add redis-conn-wrapper` `npm install redis-conn-wrapp
 
 ```javascript
 
-const redis = require('redis')
 const wrapper = require('redis-conn-wrapper')
 
 const redisConfig = {
@@ -16,12 +15,12 @@ const redisConfig = {
     port: 6379,
 }
 
-let conn = wrapper(redis, redisConfig)
+let conn = wrapper(redisConfig)
 
 // connection will auto close when it finished
 conn.get('key')
-    .then((data)=>{ 
-        //... 
+    .then((data)=> {
+        //...
     })
     .catch((err)=> {
         //...
@@ -36,7 +35,8 @@ conn.setObj('key1', { name : 1 })
 
 ```
 
-# Updates
+## Updates
 
 - 1.0.4: change source to ES6 syntax
 - 1.1.0: add setObj and getObj
+- 1.1.1: change to typescript
