@@ -39,3 +39,4 @@ conn.setObj('key1', { name : 1 }).then(()=> {
 - 1.1.1: change to typescript
 - 1.2.0: add ts declaration, remove auto close
 - 1.2.1: update dependencies
+- 1.2.2: export declaration

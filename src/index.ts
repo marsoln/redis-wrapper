@@ -189,9 +189,9 @@ const wrapper: (connection: RedisClient) => IWrappedRedisClient = (
   return wrappedConn
 }
 
-type ExWrappedRedisClient = {
+export type ExWrappedRedisClient = {
   getObj: (key: string) => Promise<any>
-  setObj: (key: string, value: any) => Promise<any>
+  setObj: (key: string, value: any, timeout?: number) => Promise<any>
 } & IWrappedRedisClient
 
 /**
