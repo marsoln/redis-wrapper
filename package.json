@@ -24,7 +24,7 @@
   "homepage": "https://github.com/marsoln/redis-wrapper#readme",
   "dependencies": {
     "@types/redis": "^2.8.14",
-    "redis": "^2.7.1"
+    "redis": "^3.1.1"
   },
   "devDependencies": {
     "@types/mocha": "^8.0.1",
